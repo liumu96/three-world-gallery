@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.4",
     "glslify-loader": "^2.0.0",
+    "gsap": "^3.12.4",
     "next": "14.0.4",
     "postprocessing": "^6.17.4",
     "raw-loader": "^4.0.2",

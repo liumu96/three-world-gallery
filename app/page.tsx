@@ -11,26 +11,10 @@ const itemData = [
     title: "Celestial",
     link: "/gallery/celestial",
   },
-
   {
-    img: "https://i.pinimg.com/474x/c8/8b/a1/c88ba1b1f70f9d9281912f8dd7062b6d.jpg",
-    title: "Plant",
-  },
-  {
-    img: "https://i.pinimg.com/736x/20/52/aa/2052aad947d4ffb866a18a819d997bf9.jpg",
-    title: "Plant",
-  },
-  {
-    img: "https://i.pinimg.com/736x/64/4c/34/644c34259efbb80e3e85c9c8098d90f8.jpg",
-    title: "Plant",
-  },
-  {
-    img: "https://i.pinimg.com/736x/f6/1f/8c/f61f8c2e7f5e486073db0cef3a4dbeda.jpg",
-    title: "Plant",
-  },
-  {
-    img: "https://i.pinimg.com/736x/cb/65/8f/cb658fa5ba315bbb47a376675bd71776.jpg",
-    title: "Plant",
+    img: "./preview/shybirds.png",
+    title: "ShyBirds",
+    link: "/gallery/shybirds",
   },
 ];
 

@@ -7,7 +7,7 @@ import CelestialBody from "@/utils/CelestialBody";
 const Celestial = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [show, setShow] = useState<boolean>(true);
-  console.log(222);
+
   useEffect(() => {
     if (canvasRef.current) {
       const cb = new CelestialBody(canvasRef.current);
