@@ -1,8 +1,17 @@
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import ListSubheader from "@mui/material/ListSubheader";
+import IconButton from "@mui/material/IconButton";
+import Link from "next/link";
+
 const itemData = [
   {
-    img: "https://i.pinimg.com/736x/3e/3f/9a/3e3f9a309c76c20e41f5a0d6d4121235.jpg",
-    title: "Plant",
+    img: "./preview/calestial.jpg",
+    title: "Celestial",
+    link: "/gallery/celestial",
   },
+
   {
     img: "https://i.pinimg.com/474x/c8/8b/a1/c88ba1b1f70f9d9281912f8dd7062b6d.jpg",
     title: "Plant",
@@ -25,12 +34,6 @@ const itemData = [
   },
 ];
 
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import ListSubheader from "@mui/material/ListSubheader";
-import IconButton from "@mui/material/IconButton";
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between pt-24">
@@ -42,13 +45,17 @@ export default function Home() {
         <ImageList variant="masonry" cols={3} gap={8}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
-              <img
-                srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=161&fit=crop&auto=format`}
-                alt={item.title}
-                loading="lazy"
-              />
+              <Link href={item.link || "/gallery/celestial"}>
+                <img
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </Link>
+
               <ImageListItemBar
+                className="font-mono"
                 title={item.title}
                 // subtitle={item.author}
                 actionIcon={
