@@ -1,33 +1,20 @@
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import ListSubheader from "@mui/material/ListSubheader";
 import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
-
-const itemData = [
-  {
-    img: "./preview/calestial.jpg",
-    title: "Celestial",
-    link: "/gallery/celestial",
-  },
-  {
-    img: "./preview/shybirds.png",
-    title: "ShyBirds",
-    link: "/gallery/shybirds",
-  },
-];
+import GalleryWorks from "@/utils/gallery";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between pt-24">
+    <main className="flex min-h-screen flex-col items-center justify-between pt-12">
       <div className="z-10 max-w-5xl w-full font-mono">
-        <h3 className="text-center font-mono text-4xl w-full flex items-center justify-center">
+        <h3 className="text-center font-mono text-4xl w-full flex items-center justify-center mb-10">
           Gallery
         </h3>
-        {/* TODO DEMOS */}
+
         <ImageList variant="masonry" cols={3} gap={8}>
-          {itemData.map((item) => (
+          {GalleryWorks.map((item) => (
             <ImageListItem key={item.img}>
               <Link href={item.link || "/gallery/celestial"}>
                 <img

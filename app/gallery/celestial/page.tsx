@@ -3,6 +3,7 @@
 import Title from "@/components/Title";
 import React, { useEffect, useRef, useState } from "react";
 import CelestialBody from "@/utils/CelestialBody";
+import Navigator from "@/components/Navigator";
 
 const Celestial = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -27,6 +28,7 @@ const Celestial = () => {
 
   return (
     <div className="w-full h-screen relative">
+      <Navigator title="celestial"></Navigator>
       <Title title="Celestial"></Title>
       <canvas
         ref={canvasRef}

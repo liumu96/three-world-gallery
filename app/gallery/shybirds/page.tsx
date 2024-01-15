@@ -2,6 +2,7 @@
 import Title from "@/components/Title";
 import React, { useEffect, useRef } from "react";
 import ShyBirds from "@/utils/ShyBirds";
+import Navigator from "@/components/Navigator";
 
 const ShyBird = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -13,6 +14,7 @@ const ShyBird = () => {
   }, []);
   return (
     <div className="w-full h-screen relative bg-amber-50">
+      <Navigator title="ShyBirds"></Navigator>
       <Title title="ShyBird" textColor="text-orange-500"></Title>
       <canvas
         ref={canvasRef}
