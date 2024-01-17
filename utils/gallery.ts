@@ -23,6 +23,14 @@ const GalleryWorks = [
     textColor: "text-gray-900",
     bgColor: "",
   },
+  {
+    img: "./preview/ripple.png",
+    title: "Ripple",
+    link: "/gallery/ripple",
+    routePath: "ripple",
+    textColor: "text-blue-500",
+    bgColor: "",
+  },
 ];
 
 export default GalleryWorks;
