@@ -31,6 +31,14 @@ const GalleryWorks = [
     textColor: "text-blue-500",
     bgColor: "",
   },
+  {
+    img: "./preview/mouseeffect.png",
+    title: "Mouse Effect",
+    link: "/gallery/mouseeffect",
+    routePath: "mouseeffect",
+    textColor: "text-blue-500",
+    bgColor: "",
+  },
 ];
 
 export default GalleryWorks;

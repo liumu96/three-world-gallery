@@ -30,6 +30,7 @@ class CelestialBody {
   blobs: Array<any>;
   gui!: Pane;
   guiBlobFolder: any;
+  controls!: OrbitControls;
 
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
@@ -81,7 +82,7 @@ class CelestialBody {
       5000
     );
     this.camera.position.z = 2000;
-    new OrbitControls(this.camera, this.renderer?.domElement);
+    this.controls = new OrbitControls(this.camera, this.renderer?.domElement);
   }
 
   initPostProcessing() {
@@ -198,6 +199,8 @@ class CelestialBody {
         this.blobs.splice(i, 1);
       }
     });
+
+    this.controls.update();
 
     this.composer.render();
   }

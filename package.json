@@ -13,14 +13,18 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.4",
     "@mui/material": "^5.15.4",
+    "glsl-easings": "^1.0.0",
     "glslify-loader": "^2.0.0",
     "gsap": "^3.12.4",
+    "n8ao": "^1.7.4",
     "next": "14.0.4",
     "postprocessing": "^6.17.4",
     "raw-loader": "^4.0.2",
     "react": "^18",
     "react-dom": "^18",
+    "stats.js": "^0.17.0",
     "three": "^0.160.0",
+    "three-bas": "^3.0.0",
     "tweakpane": "^4.0.3"
   },
   "devDependencies": {
