@@ -16,12 +16,13 @@ export default function Home() {
         <ImageList variant="masonry" cols={3} gap={8}>
           {GalleryWorks.map((item) => (
             <ImageListItem key={item.img}>
-              <Link href={item.link || "/gallery/celestial"}>
+              <Link href={item.link || "/gallery/celestial"} className="w-full">
                 <img
                   srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
                   src={`${item.img}?w=161&fit=crop&auto=format`}
                   alt={item.title}
                   loading="lazy"
+                  className="w-full"
                 />
               </Link>
 

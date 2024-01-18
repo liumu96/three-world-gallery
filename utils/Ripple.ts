@@ -45,19 +45,19 @@ class Ripple {
     const loader = new THREE.TextureLoader();
     // let texture, rtTexture, rtTexture2, environment, pooltex;
     loader.setCrossOrigin("anonymous");
-    loader.load("/preview/noise.png", (tex) => {
+    loader.load("/assets/noise.png", (tex) => {
       this.texture = tex;
       this.texture.wrapS = THREE.RepeatWrapping;
       this.texture.wrapT = THREE.RepeatWrapping;
       this.texture.minFilter = THREE.LinearFilter;
 
-      loader.load("/preview/env_lat-lon.png", (tex) => {
+      loader.load("/assets/env_lat-lon.png", (tex) => {
         this.environment = tex;
         this.environment.wrapS = THREE.RepeatWrapping;
         this.environment.wrapT = THREE.RepeatWrapping;
         this.environment.minFilter = THREE.NearestMipMapNearestFilter;
 
-        loader.load("/preview/tiling-mosaic.jpg", (tex) => {
+        loader.load("/assets/tiling-mosaic.jpg", (tex) => {
           this.pooltex = tex;
           this.pooltex.wrapS = THREE.RepeatWrapping;
           this.pooltex.wrapT = THREE.RepeatWrapping;

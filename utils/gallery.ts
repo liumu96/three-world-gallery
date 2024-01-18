@@ -1,6 +1,6 @@
 const GalleryWorks = [
   {
-    img: "./preview/calestial.jpg",
+    img: "./preview/celestial.gif",
     title: "Celestial",
     link: "/gallery/celestial",
     routePath: "celestial",
@@ -8,7 +8,23 @@ const GalleryWorks = [
     bgColor: "",
   },
   {
-    img: "./preview/shybirds.png",
+    img: "./preview/blossom.gif",
+    title: "Typing Effect",
+    link: "/gallery/typingeffect",
+    routePath: "typingeffect",
+    textColor: "text-white",
+    bgColor: "",
+  },
+  {
+    img: "./preview/mouseeffect.gif",
+    title: "Mouse Effect",
+    link: "/gallery/mouseeffect",
+    routePath: "mouseeffect",
+    textColor: "text-blue-500",
+    bgColor: "",
+  },
+  {
+    img: "./preview/shybirds.gif",
     title: "ShyBirds",
     link: "/gallery/shybirds",
     routePath: "shybirds",
@@ -16,7 +32,7 @@ const GalleryWorks = [
     bgColor: "",
   },
   {
-    img: "./preview/confetti.png",
+    img: "./preview/confetti.gif",
     title: "Confetti Text",
     link: "/gallery/confettitext",
     routePath: "confettitext",
@@ -24,21 +40,14 @@ const GalleryWorks = [
     bgColor: "",
   },
   {
-    img: "./preview/ripple.png",
+    img: "./preview/ripple.gif",
     title: "Ripple",
     link: "/gallery/ripple",
     routePath: "ripple",
     textColor: "text-blue-500",
     bgColor: "",
   },
-  {
-    img: "./preview/mouseeffect.png",
-    title: "Mouse Effect",
-    link: "/gallery/mouseeffect",
-    routePath: "mouseeffect",
-    textColor: "text-blue-500",
-    bgColor: "",
-  },
+
   {
     img: "./preview/particlemusic.gif",
     title: "Particle Music",
