@@ -11,7 +11,6 @@ const Navigator = ({ title }: { title: string }) => {
   const [index, setIndex] = useState<number>(0);
   useEffect(() => {
     const index = GalleryWorks.findIndex((item) => item.title === title);
-    console.log(index, GalleryWorks[index]?.textColor);
     setIndex(index);
 
     let lastIndex = index - 1;

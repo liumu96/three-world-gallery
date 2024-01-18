@@ -50,7 +50,7 @@ const MouseEffectPage = () => {
 
   return (
     <div className="w-full h-screen relative">
-      <Navigator title="mouseeffect"></Navigator>
+      <Navigator title="Mouse Effect"></Navigator>
       <Title title="Mouse Effect"></Title>
       <canvas
         ref={canvasRef}

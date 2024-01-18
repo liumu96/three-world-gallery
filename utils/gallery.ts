@@ -39,6 +39,14 @@ const GalleryWorks = [
     textColor: "text-blue-500",
     bgColor: "",
   },
+  {
+    img: "./preview/particlemusic.gif",
+    title: "Particle Music",
+    link: "/gallery/particlemusic",
+    routePath: "particlemusic",
+    textColor: "text-white",
+    bgColor: "",
+  },
 ];
 
 export default GalleryWorks;

@@ -28,7 +28,7 @@ const Celestial = () => {
 
   return (
     <div className="w-full h-screen relative">
-      <Navigator title="celestial"></Navigator>
+      <Navigator title="Celestial"></Navigator>
       <Title title="Celestial"></Title>
       <canvas
         ref={canvasRef}
