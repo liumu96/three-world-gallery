@@ -15,6 +15,14 @@ const GalleryWorks = [
     textColor: "text-white",
     bgColor: "",
   },
+  // {
+  //   img: "./preview/blossom.gif",
+  //   title: "Model Customizer",
+  //   link: "/gallery/modelcustomizer",
+  //   routePath: "modelcustomizer",
+  //   textColor: "text-white",
+  //   bgColor: "",
+  // },
   {
     img: "./preview/mouseeffect.gif",
     title: "Mouse Effect",
@@ -47,7 +55,30 @@ const GalleryWorks = [
     textColor: "text-blue-500",
     bgColor: "",
   },
-
+  {
+    img: "./preview/glass-refraction.gif",
+    title: "GLASS REFRACTION",
+    link: "/gallery/refractioneffect",
+    routePath: "refractioneffect",
+    textColor: "text-white",
+    bgColor: "",
+  },
+  {
+    img: "./preview/water-refraction.gif",
+    title: "DIAMOND REFRACTION",
+    link: "/gallery/refractioneffect-2",
+    routePath: "refractioneffect-2",
+    textColor: "text-white",
+    bgColor: "",
+  },
+  // {
+  //   img: "./preview/ripple.gif",
+  //   title: "Impulsion Effect",
+  //   link: "/gallery/impulsioneffect",
+  //   routePath: "impulsioneffect",
+  //   textColor: "text-blue-500",
+  //   bgColor: "",
+  // },
   {
     img: "./preview/particlemusic.gif",
     title: "Particle Music",

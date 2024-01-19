@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.4",
     "@mui/material": "^5.15.4",
+    "@tweakpane/plugin-essentials": "^0.2.1",
     "dat.gui": "^0.7.9",
     "glsl-easings": "^1.0.0",
     "glslify-loader": "^2.0.0",
