@@ -1,9 +1,15 @@
 import * as THREE from "three";
-import * as dat from "dat.gui";
+// import * as dat from "dat.gui";
 
 import AudioManager from "./managers/AudioManager";
 import BPMManager from "./managers/BPMManager";
 import ReactiveParticles from "./entities/ReactiveParticles";
+
+let dat: { GUI: any; default?: any };
+const init = async () => {
+  dat = await import("dat.gui");
+  ParticleMusic.gui = new dat.GUI();
+};
 
 class ParticleMusic {
   static holder: THREE.Object3D = new THREE.Object3D();
@@ -24,6 +30,7 @@ class ParticleMusic {
   height: number = 1;
 
   constructor(canvas: HTMLCanvasElement) {
+    init();
     this.canvas = canvas;
     this.renderer = new THREE.WebGLRenderer({
       canvas,
@@ -50,7 +57,7 @@ class ParticleMusic {
     ParticleMusic.holder.name = "holder";
     this.scene.add(ParticleMusic.holder);
 
-    ParticleMusic.gui = new dat.GUI();
+    // ParticleMusic.gui = new dat.GUI();
 
     this.createManagers();
 
@@ -110,7 +117,7 @@ class ParticleMusic {
   }
 
   stop() {
-    ParticleMusic.audioManager?.stop();
+    // ParticleMusic.audioManager?.stop();
   }
 }
 
