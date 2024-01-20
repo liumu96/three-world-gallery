@@ -17,7 +17,7 @@ const RefractionEffectPage = () => {
   }, [canvasRef.current]);
   return (
     <div className="w-full h-screen relative">
-      <Navigator title="Refraction Effect"></Navigator>
+      <Navigator title="Refraction Effect-2"></Navigator>
       {/* <Title title="Refraction Effect"></Title> */}
       <canvas
         ref={canvasRef}

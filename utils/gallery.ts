@@ -1,7 +1,7 @@
 const GalleryWorks = [
   {
     img: "./preview/water-refraction.gif",
-    title: "DIAMOND REFRACTION",
+    title: "Refraction Effect-2",
     link: "/gallery/refractioneffect-2",
     routePath: "refractioneffect-2",
     textColor: "text-white",
@@ -12,7 +12,7 @@ const GalleryWorks = [
     title: "Model Customizer",
     link: "/gallery/modelcustomizer",
     routePath: "modelcustomizer",
-    textColor: "text-red-500",
+    textColor: "text-orange-500",
     bgColor: "",
   },
   {
@@ -59,7 +59,7 @@ const GalleryWorks = [
 
   {
     img: "./preview/glass-refraction.gif",
-    title: "GLASS REFRACTION",
+    title: "Refraction Effect",
     link: "/gallery/refractioneffect",
     routePath: "refractioneffect",
     textColor: "text-white",
