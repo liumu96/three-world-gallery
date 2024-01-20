@@ -7,9 +7,9 @@ import GalleryWorks from "@/utils/gallery";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between pt-12">
+    <main className="flex min-h-screen flex-col items-center justify-between pt-12 bg-orange-50">
       <div className="z-10 max-w-5xl w-full font-mono">
-        <h3 className="text-center font-mono text-4xl w-full flex items-center justify-center mb-10">
+        <h3 className="text-center font-mono text-4xl w-full flex items-center justify-center mb-10 text-orange-400">
           Gallery
         </h3>
 
