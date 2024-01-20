@@ -15,14 +15,14 @@ const GalleryWorks = [
     textColor: "text-white",
     bgColor: "",
   },
-  // {
-  //   img: "./preview/blossom.gif",
-  //   title: "Model Customizer",
-  //   link: "/gallery/modelcustomizer",
-  //   routePath: "modelcustomizer",
-  //   textColor: "text-white",
-  //   bgColor: "",
-  // },
+  {
+    img: "./preview/modelcustomizer.gif",
+    title: "Model Customizer",
+    link: "/gallery/modelcustomizer",
+    routePath: "modelcustomizer",
+    textColor: "text-red-500",
+    bgColor: "",
+  },
   {
     img: "./preview/mouseeffect.gif",
     title: "Mouse Effect",
