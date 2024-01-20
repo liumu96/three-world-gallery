@@ -31,9 +31,9 @@ const ParticleMusicPage = () => {
     } else {
       particleMusic?.pause();
     }
-    window.addEventListener("keydown", onKeyDown);
+    document.addEventListener("keydown", onKeyDown);
     return () => {
-      window.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("keydown", onKeyDown);
     };
   }, [play]);
   const onKeyDown = (e: KeyboardEvent) => {
