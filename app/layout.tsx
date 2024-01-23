@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head />
-      <body className="dark:bg-stone-900">
+      <body className="dark:bg-stone-900" suppressHydrationWarning={true}>
         {/* <Navbar /> */}
         {children}
         {/* <Footer /> */}

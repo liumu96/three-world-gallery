@@ -9,3 +9,19 @@ declare interface IColor {
   shininess?: number;
   size?: Array<number>;
 }
+
+declare interface IPhysicsParams {
+  gravity: number;
+  timeScale: number;
+  timeStep: number;
+  numSubsteps: number;
+  dt: number;
+  friction: number;
+  density: number;
+  devCompliance: number;
+  volCompliance: number;
+  worldBounds: number[];
+  computeNormals: boolean;
+  ShowTetMesh: boolean;
+  cpuSim: boolean;
+}

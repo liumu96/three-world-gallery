@@ -1,5 +1,13 @@
 const GalleryWorks = [
   {
+    img: "./preview/tetsim.gif",
+    title: "Tetrahedral Simulation",
+    link: "/simulation/tetsim",
+    routePath: "tetsim",
+    textColor: "text-white",
+    bgColor: "",
+  },
+  {
     img: "./preview/water-refraction.gif",
     title: "Refraction Effect-2",
     link: "/gallery/refractioneffect-2",
