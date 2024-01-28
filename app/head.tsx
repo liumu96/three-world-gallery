@@ -8,7 +8,7 @@ export default function Head() {
         content="A collection of interactive 3D demos created by 3D Demo Gallery"
       />
       <meta name="author" content="Liu Xing"></meta>
-      {/* <link rel="icon" href="/logo/logo.svg" /> */}
+      <link rel="icon" href="/logo.png" />
     </>
   );
 }
