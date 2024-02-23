@@ -25,3 +25,11 @@ declare interface IPhysicsParams {
   ShowTetMesh: boolean;
   cpuSim: boolean;
 }
+
+declare interface IWorks {
+  name?: string;
+  routePath?: string;
+  img?: string;
+  textColor?: string;
+  link?: string;
+}

@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import GalleryWorks from "@/utils/gallery";
 import Link from "next/link";

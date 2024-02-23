@@ -1,4 +1,20 @@
 const GalleryWorks = [
+  // {
+  //   img: "./preview/tetsim.gif",
+  //   title: "XPBD",
+  //   link: "/simulation/XPBD",
+  //   routePath: "XPBD",
+  //   textColor: "text-white",
+  //   bgColor: "",
+  // },
+  // {
+  //   img: "./preview/tetsim.gif",
+  //   title: "Fire Ball",
+  //   link: "/gallery/fireball",
+  //   routePath: "fireball",
+  //   textColor: "text-black",
+  //   bgColor: "",
+  // },
   {
     img: "./preview/tetsim.gif",
     title: "Tetrahedral Simulation",
@@ -7,6 +23,7 @@ const GalleryWorks = [
     textColor: "text-white",
     bgColor: "",
   },
+
   {
     img: "./preview/water-refraction.gif",
     title: "Refraction Effect-2",
