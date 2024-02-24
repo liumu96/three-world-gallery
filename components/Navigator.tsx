@@ -29,7 +29,7 @@ const Navigator = ({ title }: { title: string }) => {
   return (
     <div
       className={`absolute left-0 z-50 p-4 grid grid-cols-2 gap-16 ${
-        GalleryWorks[index]?.textColor || "text-white"
+        GalleryWorks[index]?.textColor || "text-black"
       }`}
     >
       <Link href="/" className="font-mono">

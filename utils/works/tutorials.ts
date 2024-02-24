@@ -1,10 +1,10 @@
 const TutorialItems = [
   {
-    name: "",
+    name: "Physical Transmission",
     routePath: "",
-    img: "",
-    textColor: "",
-    link: "",
+    img: "./preview/tutorials/physical_transmission.png",
+    textColor: "text-orange-500",
+    link: "/tutorials/physical_transmission",
   },
 ];
 

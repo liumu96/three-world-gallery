@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ChangeEvent, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Navigator from "@/components/Navigator";
 import Title from "@/components/Title";
 import RefractionEffect from "@/utils/Refraction";
