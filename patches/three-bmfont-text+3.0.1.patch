@@ -1,0 +1,59 @@
+diff --git a/node_modules/three-bmfont-text/index.js b/node_modules/three-bmfont-text/index.js
+index 929a3ee..79ba1ab 100755
+--- a/node_modules/three-bmfont-text/index.js
++++ b/node_modules/three-bmfont-text/index.js
+@@ -5,28 +5,28 @@ var createIndices = require('quad-indices')
+ var vertices = require('./lib/vertices')
+ var utils = require('./lib/utils')
+ 
+-var Base = THREE.BufferGeometry
+ 
+ module.exports = function createTextGeometry (opt) {
+   return new TextGeometry(opt)
+ }
+ 
+-function TextGeometry (opt) {
+-  Base.call(this)
++class TextGeometry extends THREE.BufferGeometry {
++  constructor(opt) {
++    super(opt);
+ 
+-  if (typeof opt === 'string') {
+-    opt = { text: opt }
+-  }
++    if (typeof opt === 'string') {
++      opt = { text: opt }
++    }
+ 
+-  // use these as default values for any subsequent
+-  // calls to update()
+-  this._opt = Object.assign({}, opt)
++    // use these as default values for any subsequent
++    // calls to update()
++    this._opt = Object.assign({}, opt)
+ 
+-  // also do an initial setup...
+-  if (opt) this.update(opt)
++    // also do an initial setup...
++    if (opt) this.update(opt)
++  }
+ }
+ 
+-inherits(TextGeometry, Base)
+ 
+ TextGeometry.prototype.update = function (opt) {
+   if (typeof opt === 'string') {
+diff --git a/node_modules/three-bmfont-text/shaders/msdf.js b/node_modules/three-bmfont-text/shaders/msdf.js
+index 8973a70..b0b60da 100644
+--- a/node_modules/three-bmfont-text/shaders/msdf.js
++++ b/node_modules/three-bmfont-text/shaders/msdf.js
+@@ -34,9 +34,6 @@ module.exports = function createMSDFShader (opt) {
+       '}'
+     ].join('\n'),
+     fragmentShader: [
+-      '#ifdef GL_OES_standard_derivatives',
+-      '#extension GL_OES_standard_derivatives : enable',
+-      '#endif',
+       'precision ' + precision + ' float;',
+       'uniform float opacity;',
+       'uniform vec3 color;',

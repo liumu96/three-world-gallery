@@ -1,5 +1,12 @@
 const EffectItems = [
   {
+    img: "./preview/water-distortion.gif",
+    name: "Water Distortion",
+    link: "/effects/waterdistortion",
+    routePath: "waterdistortion",
+    textColor: "text-white",
+  },
+  {
     img: "./preview/glass-refraction.gif",
     name: "Refraction Effect",
     link: "/effects/refractioneffect",

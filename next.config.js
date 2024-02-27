@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const webpack = require("webpack");
 const nextConfig = {
   reactStrictMode: false,
   webpack: (config, options) => {
@@ -7,6 +8,11 @@ const nextConfig = {
       exclude: /node_modules/,
       use: ["raw-loader", "glslify-loader"],
     });
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+        THREE: "three",
+      })
+    );
 
     return config;
   },
