@@ -6,6 +6,13 @@ const ProjectItems = [
     textColor: "text-orange-500",
     link: "/projects/modelcustomizer",
   },
+  {
+    name: "Scrolling Animation",
+    routePath: "scrollinganimation",
+    img: "./preview/roomscrolling.png",
+    textColor: "text-orange-500",
+    link: "/projects/scrollinganimation",
+  },
 ];
 
 export default ProjectItems;
