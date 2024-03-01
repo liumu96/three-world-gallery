@@ -13,6 +13,13 @@ const ProjectItems = [
     textColor: "text-orange-500",
     link: "/projects/scrollinganimation",
   },
+  {
+    name: "Brain Animation",
+    routePath: "brainanimation",
+    img: "./preview/brainanimation.gif",
+    textColor: "text-white",
+    link: "/projects/brainanimation",
+  },
 ];
 
 export default ProjectItems;
