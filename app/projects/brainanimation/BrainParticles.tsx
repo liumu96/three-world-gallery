@@ -2,8 +2,7 @@ import * as THREE from "three";
 import { Canvas, ReactThreeFiber, extend, useFrame } from "@react-three/fiber";
 import { OrbitControls, shaderMaterial } from "@react-three/drei";
 
-import { MutableRefObject, useEffect, useMemo, useRef } from "react";
-import { Ref } from "@react-three/fiber";
+import { MutableRefObject, Ref, useEffect, useMemo, useRef } from "react";
 
 const randomRange = (min: number, max: number) =>
   Math.random() * (max - min) + min;
@@ -63,7 +62,7 @@ export function BrainParticles({
       curPosition: number;
     }>
   >([]);
-  const brainGeo: MutableRefObject<Ref<THREE.BufferGeometry>> = useRef();
+  const brainGeo: MutableRefObject<THREE.BufferGeometry | null> = useRef(null);
   let positions = useMemo(() => {
     let positions = [];
     for (let i = 0; i < numberOfPoints; i++) {

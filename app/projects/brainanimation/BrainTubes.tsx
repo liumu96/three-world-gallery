@@ -5,7 +5,6 @@ import { shaderMaterial } from "@react-three/drei";
 
 import { extend } from "@react-three/fiber";
 import { MutableRefObject, useRef } from "react";
-import { Ref } from "@react-three/fiber";
 
 const BrainMaterial = shaderMaterial(
   {
@@ -66,13 +65,24 @@ declare global {
 
 function Tube({ curve }: { curve: THREE.CatmullRomCurve3 }) {
   const brainMat: MutableRefObject<
-    Ref<typeof THREE.ShaderMaterial> | undefined
-  > = useRef();
+    | (typeof THREE.ShaderMaterial & {
+        key: string;
+      } & ReactThreeFiber.ExtendedColors<
+          ReactThreeFiber.Overwrite<
+            Partial<THREE.ShaderMaterial>,
+            ReactThreeFiber.NodeProps<
+              THREE.ShaderMaterial,
+              [THREE.ShaderMaterialParameters]
+            >
+          >
+        >)
+    | null
+  > = useRef(null);
 
   const { viewport } = useThree();
 
   useFrame(({ clock, pointer }) => {
-    if (brainMat.current) {
+    if (brainMat.current && brainMat.current.uniforms) {
       brainMat.current.uniforms.time.value = clock.getElapsedTime();
       brainMat.current.uniforms.mouse.value = new THREE.Vector3(
         (pointer.x * viewport.width) / 2,
