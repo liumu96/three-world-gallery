@@ -1,6 +1,8 @@
 import * as THREE from "three";
 
 import { OrbitControls } from "three/examples/jsm/Addons.js";
+// import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+
 import vertex from "@/public/shaders/sketch/vertex.glsl";
 import fragment from "@/public/shaders/sketch/fragment.glsl";
 
@@ -12,7 +14,7 @@ export default class Sketch {
   camera: THREE.PerspectiveCamera;
   controls: OrbitControls;
   time: number;
-  paused: boolean;
+  isPlaying: boolean;
   imageAspect: number = 853 / 1280;
   material: THREE.ShaderMaterial | undefined;
   geometry: THREE.PlaneGeometry | undefined;
@@ -44,7 +46,9 @@ export default class Sketch {
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.time = 0;
 
-    this.paused = false;
+    // todo dracoLoader && gltfLoader
+
+    this.isPlaying = true;
 
     this.setupResize();
 
@@ -90,8 +94,19 @@ export default class Sketch {
     this.plane = new THREE.Mesh(this.geometry, this.material);
     this.scene.add(this.plane);
   }
+
+  play() {
+    if (!this.isPlaying) {
+      this.isPlaying = true;
+      this.render();
+    }
+  }
+
+  stop() {
+    this.isPlaying = false;
+  }
   render() {
-    if (this.paused) return;
+    if (!this.isPlaying) return;
     this.time += 0.05;
     if (this.material) {
       this.material.uniforms.time.value = this.time;
