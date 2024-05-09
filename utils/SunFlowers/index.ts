@@ -6,12 +6,7 @@ import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import { MeshSurfaceSampler } from "three/examples/jsm/Addons.js";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 
-// console.log(MeshSurfaceSampler);
-
 import * as dat from "dat.gui";
-
-import vertex from "@/public/shaders/sketch/vertex.glsl";
-import fragment from "@/public/shaders/sketch/fragment.glsl";
 
 export default class SunFlowersSketch {
   scene: THREE.Scene;

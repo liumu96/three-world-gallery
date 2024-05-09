@@ -1,8 +1,8 @@
 import * as THREE from "three";
 
 import { OrbitControls } from "three/examples/jsm/Addons.js";
-// import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
-
+import { GLTFLoader } from "three/examples/jsm/Addons.js";
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import vertex from "@/public/shaders/sketch/vertex.glsl";
 import fragment from "@/public/shaders/sketch/fragment.glsl";
 
@@ -25,6 +25,8 @@ export default class Sketch {
         THREE.Object3DEventMap
       >
     | undefined;
+  gltfLoader: GLTFLoader;
+  dracoLoader: DRACOLoader;
   constructor(canvas: HTMLCanvasElement) {
     this.scene = new THREE.Scene();
 
@@ -47,6 +49,10 @@ export default class Sketch {
     this.time = 0;
 
     // todo dracoLoader && gltfLoader
+    this.gltfLoader = new GLTFLoader();
+    this.dracoLoader = new DRACOLoader();
+    this.dracoLoader.setDecoderPath("/draco/");
+    this.gltfLoader.setDRACOLoader(this.dracoLoader);
 
     this.isPlaying = true;
 
@@ -65,16 +71,7 @@ export default class Sketch {
     this.height = window.innerHeight;
     this.renderer.setSize(this.width, this.height);
     this.camera.aspect = this.width / this.height;
-
-    // image cover
-    let a1, a2;
-    if (this.height / this.width > this.imageAspect) {
-      a1 = (this.width / this.height) * this.imageAspect;
-      a2 = 1;
-    } else {
-      a1 = 1;
-      a2 = this.height / this.width / this.imageAspect;
-    }
+    this.camera.updateProjectionMatrix();
   }
 
   addObjects() {
